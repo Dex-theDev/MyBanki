@@ -58,7 +58,6 @@ console.log(Array.from(document.querySelectorAll('.questionCard')))
 
 async function deleteQuestion(){
    // console.log('button clicked')
-    console.log(this.parentNode)
     const topic = this.parentNode.childNodes[1].innerText
     const singleQuestion = this.parentNode.childNodes[3].innerText
     const answer = this.parentNode.childNodes[5].innerText

@@ -99,6 +99,7 @@ ul {
     font-family: 'Montserrat Alternates', sans-serif;
     font-size: .75rem;
     color: var(--main-text);
+    width: 80%;
 }
 form {
     width: 20%;

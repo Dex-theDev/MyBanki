@@ -36,9 +36,9 @@ app.get('/', (req,res) => {
     res.render('index.ejs')
 })
 app.get('/add-edit-delete', (req,res) => {
-    const cursor = db.collection('questions').find().toArray()
+    db.collection('questions').find().toArray()
     .then(results => {
-        res.render('add-edit-delete', { questions: results})
+        res.render('add-edit-delete.ejs', { questions: results})
     })
     .catch(error => console.error(error))
     //will add more later
@@ -83,10 +83,11 @@ app.put('/updateEntry', (req,res) => {
 })
 
 app.delete('/deleteQuestion', (req,res) => {
-    db.collection('questions').deleteOne( {topic: req.body.topic, question: req.body.question, answer: req.body.answer} )
+    db.collection('questions').deleteOne({topic: req.body.topic }, {question: req.body.question}, {answer: req.body.answer})
     .then(result => {
         console.log('Entry deleted')
         res.json('Entry Deleted')
+        console.log(JSON.stringify(req.body.topic, req.body.question, req.body.answer))
     })
     .catch(err => console.error(err))
 })
