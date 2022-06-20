@@ -1,0 +1,134 @@
+:root {
+    --background-color: #eb439146;
+    --main-text: #4A0D67;
+    --card-color: #a7c4a093;
+    --accent-color: #f75c039c;
+}
+
+body {
+    text-align: center;
+    font-size: 62.5%;
+    background-color: var(--background-color);
+}
+h1 {
+    font-family: 'Passion One', cursive;
+    font-size: 2rem;
+    color: var(--main-text);
+}
+
+h3{
+    font-family: 'Montserrat Alternates', sans-serif;
+    color: var(--main-text);
+}
+/* working on individual question boxes first*/
+span {
+    display: block;
+}
+.questionView {
+    
+    padding: 25px;
+    width: 60%;
+    margin: 0 auto;
+    
+}
+.questionCard {
+    border: 2px solid rgb(132, 194, 126);
+    list-style: none;
+    margin-bottom: 1em;
+    width: 40%;
+    border-radius: .5rem;
+    overflow: hidden;
+    margin: 1em auto;
+    background: var(--card-color);
+    
+}
+.singleQuestion {
+    display: block;
+    margin-top: 1em;
+    width: 100%;
+    position: relative;
+    padding-bottom: .5em;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: .75rem;
+    color: var(--main-text);
+}
+.singleQuestion:after {
+    content: '';
+    width: 90%;
+    border-bottom: dashed 2px #F75C03F9;
+    position: absolute;
+    left: 10px;
+    top: 100%;
+    z-index: 1;
+}
+ul {
+    margin: 0 auto;
+    padding: 0;
+}
+.question, .answer {
+    display: block;
+    max-width: fit-content;
+}
+.question {
+    margin-bottom: .5em;
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+.garbageCan {
+    font-size: 20px;
+    float: right;
+    padding: .2em;
+}
+.garbageCan:hover {
+    color: var(--accent-color);
+    transition: ease 200ms;
+}
+    
+.topic {
+    margin: 10px 5px;
+    font-weight: bold;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: .80rem;
+    color: var(--main-text);
+}
+.singleQuestion, .answer {
+    margin-left: 5px;
+}
+.answer{
+    padding-top: 1em;
+    margin: 0 auto;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: .75rem;
+    color: var(--main-text);
+}
+form {
+    width: 20%;
+    border: solid 2px var(--accent-color);
+    margin: 0 auto;
+    border-radius: .5rem;
+    padding: 1em 0 1.5em 0;
+    
+}
+fieldset {
+    display: flex;
+    justify-content: center;
+    border: none;
+    gap: 1.5em;
+} 
+textarea {
+    border-radius: 5px;
+    background-color: var(--background-color);
+}
+.submit-button {
+    margin-top: 1em;
+}
+label {
+    text-align: start;
+    display: block;
+    padding-left: .5em;
+    font-family: 'Montserrat Alternates', sans-serif;
+    color: var(--main-text);
+}
+legend {
+    font-family: 'Montserrat Alternates', sans-serif;
+    color: var(--main-text);
+}

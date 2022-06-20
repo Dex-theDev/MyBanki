@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/cb1113dac4.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates&family=Passion+One&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="add-edit-delete.css">
+    <title>Add/Edit/Delete Questions</title>
+</head>
+<body>
+    <h1>View Your Questions</h1>
+
+    <h3>View questions by topic:</h3>
+    <div class="buttons">
+        <button type="button">Behavioral</button>
+        <button type="button">HTML</button>
+        <button type="button">CSS</button>
+        <button type="button">Javascript</button>
+    </div>
+
+    <div class="questionView">
+        <ul>
+            <% for(i = 0; i < questions.length; i++) {%>
+                <li class="questionCard">
+                    <span class="topic"><%= questions[i].topic %></span>
+                    <span class="singleQuestion"><%= questions[i].question %></span>
+                    <span class="answer"><%= questions[i].answer %></span>
+                    <span class="garbageCan">🗑</span>
+                </li>
+            <% } %>
+        </ul>
+    </div>
+    <h3>Add A New Question</h3>
+    <form action="/api" method="POST">
+        <label for="questionBox">Question:</label>
+        <textarea class="questionBox" type="text" name="question" rows="5" cols="33"></textarea>
+        <label for="answerBox">Answer:</label>
+        <textarea class="answerBox" type="text" name="answer" rows="5" cols="33"></textarea><br>
+        
+    
+    <!--Make sure the button type is 'submit' for the action to work-->
+    
+        <!--radio buttons-->
+        <fieldset>
+            <legend>Select the question's topic:</legend>
+        
+            <div>
+              <input type="radio" id="html" name="topic" value="HTML"
+                     checked>
+              <label for="HTML">HTML</label>
+            </div>
+        
+            <div>
+              <input type="radio" id="css" name="topic" value="CSS">
+              <label for="CSS">CSS</label>
+            </div>
+        
+            <div>
+              <input type="radio" id="javascript" name="topic" value="Javascript">
+              <label for="Javascript">Javascript</label>
+            </div>
+
+            <div>
+                <input type="radio" id="behavioral" name="topic" value="Behavioral">
+                <label for="behavioral">Behavioral</label>
+              </div>
+        </fieldset>
+        <button class="submit-button" type="submit">SUBMIT NEW</button>
+</form>
+ 
+    <script type="text/javascript" src="add-edit-delete.js"></script>
+</body>
+</html>
