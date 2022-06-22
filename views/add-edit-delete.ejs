@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/cb1113dac4.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates&family=Passion+One&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="add-edit-delete.css">
@@ -19,6 +20,7 @@
         <button type="button">CSS</button>
         <button type="button">Javascript</button>
     </div>
+    <a href="/">Home</a>
 
     <div class="questionView">
         <ul>
@@ -27,7 +29,7 @@
                     <span class="topic"><%= questions[i].topic %></span>
                     <span class="singleQuestion"><%= questions[i].question %></span>
                     <span class="answer"><%= questions[i].answer %></span>
-                    <span class="garbageCan">🗑</span>
+                    <span class="fa-regular fa-trash-can garbageCan"></span>
                 </li>
             <% } %>
         </ul>

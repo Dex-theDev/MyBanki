@@ -1,0 +1,76 @@
+:root {
+    --background-color: #F9CBE0;
+    --text-color: #4a0d67;
+}
+body {
+    font: 62.5%;
+    text-align: center;
+    background-color: var(--background-color);
+}
+h6 {
+    margin: 0;
+    font-family: 'Passion One', cursive;
+    font-size: 1rem;
+    font-weight: lighter;
+    color: var(--text-color);
+}
+h1, h4 {
+    font-family:  'Passion One', cursive;
+    color: var(--text-color);
+}
+h4{
+    font-size: 1.5rem;
+    font-weight: lighter;
+}
+.buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 3em;
+    gap: 1em;
+}
+.cardSpace {
+    border: solid 2px var(--text-color);
+    width: 25%;
+    margin: 2em auto 0;
+    min-height: 100px;
+    border-radius: .5rem;
+    position: relative;
+    background-color: rgba(0, 255, 255, 0.22);
+}
+.topic, .question, .answer {
+    font-family: 'Montserrat Alternates', sans-serif;
+    color: var(--text-color);
+}
+.cardSpace::after {
+    content: '';
+    width: 90%;
+    border-bottom: dashed 2px #F75C03F9;
+    position: absolute;
+    left: 10px;
+    bottom: 63%;
+    z-index: 1;
+    
+}
+.topic {
+    font-weight: bold;
+}
+.question {
+    padding-top: .5em;
+    font-style: italic;
+}
+.answer {
+    font-weight: bold;
+}
+.next-back {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    margin-top: 1em;
+}
+.viewAnswerButton {
+    margin: 0 auto;
+}
+
+.animate__animated.animate__bounceIn{
+    --animate-duration: 1s;
+}

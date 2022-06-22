@@ -4,11 +4,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates&family=Passion+One&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="index.css">
     <title>Your Own Banki</title>
 </head>
 <body>
     <h1>Your Personal Banki</h1>
     
-    <a href="/add-edit-delete">Add/Edit/Delete</a>
+    <h4>Need to study for your next interview? Look no further!</h4>
+    <h6>You can create and study your own flashcards, ranging from subjects in HTML all the way up to Behavioral questions! You can use the pre-loaded cards on the site..<a href="/add-edit-delete"> or add your own!</a></h6>
+    <div class="buttons">
+    <button class="startButton" type="button">Start</button>
+    <button class="stopButton" type="button">End</button>
+    </div>
+    <div class= "animate__animated animate__bounceIn cardSpace">
+        <p class="topic"></p>
+        <p class="question"></p>
+        <button class="viewAnswerButton">View Answer</button>
+        <p class="answer"></p>
+    </div>
+    <div class="next-back">
+        <button class="nextButton">Next</button>
+        <button class="backButton">Back</button>
+    </div>
+    <script type="text/javascript" src="index.js"></script>
 </body>
 </html>

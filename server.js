@@ -43,6 +43,51 @@ app.get('/add-edit-delete', (req,res) => {
     .catch(error => console.error(error))
     //will add more later
 })
+app.get('/api/questions',(req,res) => {
+ db.collection('questions').find().toArray()
+ .then(data => {
+    res.json(data)
+    console.log(data)
+ })
+ .catch(error => console.error(error))
+})
+
+app.get('/api/javascript', (req,res) => {
+    db.collection('questions').find({topic: 'Javascript'}).toArray()
+    .then(results => {
+        console.log(results)
+        res.json(results)
+    })
+    .catch(error => console.error(error))
+    })
+
+app.get('/api/CSS', (req,res) => {
+    db.collection('questions').find({topic:'CSS'}).toArray()
+    .then(results => {
+        console.log(results)
+        res.json(results)
+    })
+    .catch(error => console.error(error))
+    })
+
+app.get('/api/behavioral', (req,res) => {
+    db.collection('questions').find({topic:'Behavioral'}).toArray()
+    .then(results => {
+        console.log(results)
+        res.json(results)
+    })
+    .catch(error => console.error(error))
+    })
+
+app.get('/api/html', (req,res) => {
+    db.collection('questions').find({topic:'HTML'}).toArray()
+    .then(results => {
+        console.log(results)
+        res.json(results)
+    })
+    .catch(error => console.error(error))
+    })
+
 
 app.post('/api', (req,res) => {
     console.log('post heard')
@@ -52,7 +97,7 @@ app.post('/api', (req,res) => {
     .then(result => {
         console.log(result)
         console.log(req.body)
-       res.redirect('/')//redirecting to the same page for now
+       res.redirect('/add-edit-delete')//redirecting to the same page for now
       
     })
     .catch(error => console.error(error))
