@@ -1,6 +1,7 @@
 const startButton = document.querySelector('.startButton')
 const stopButton = document.querySelector('.stopButton')
-const cardSpace = document.querySelector('.cardSpace')
+const cardSpace = document.querySelector('.cardSpace','.animate__animated', '.animate__bounceIn' )
+const cardSpaceAnimation = document.querySelector('.animate__animated','.animate__bounceIn')
 const topic = document.querySelector('.topic')
 const question = document.querySelector('.question')
 const viewAnswer = document.querySelector('.viewAnswerButton')
@@ -36,7 +37,10 @@ async function getQuestions(){
             answer.innerHTML = data[counter].answer
         })
         nextButton.addEventListener('click', () => {
-           
+        cardSpace.classList.remove('animate__animated', 'animate__bounceIn')
+        setTimeout(() => {
+            cardSpace.classList.add('animate__animated', 'animate__bounceIn')
+        }, 10)
             answer.style.display = 'none'
             viewAnswer.style.display = 'block'
             counter++
@@ -54,6 +58,10 @@ async function getQuestions(){
 
         })
         backButton.addEventListener('click', ()=> {
+            cardSpace.classList.remove('animate__animated', 'animate__bounceIn')
+        setTimeout(() => {
+            cardSpace.classList.add('animate__animated', 'animate__bounceIn')
+        }, 10)
             answer.style.display = 'none'
             viewAnswer.style.display = 'block'
             counter--

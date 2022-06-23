@@ -1,5 +1,5 @@
 :root {
-    --background-color: #eb439146;
+    --background-color: #eb43911c;
     --main-text: #4A0D67;
     --card-color: #a7c4a093;
     --accent-color: #f75c039c;
@@ -9,13 +9,18 @@ body {
     text-align: center;
     font-size: 62.5%;
     background-color: var(--background-color);
+
 }
 h1 {
     font-family: 'Passion One', cursive;
     font-size: 2rem;
     color: var(--main-text);
 }
-
+a {
+    display: block;
+    font-size: 1.75rem;
+    margin: 1em;
+}
 h3{
     font-family: 'Montserrat Alternates', sans-serif;
     color: var(--main-text);
@@ -26,7 +31,6 @@ span {
 }
 .questionView {
     
-    padding: 25px;
     width: 60%;
     margin: 0 auto;
     
@@ -77,6 +81,7 @@ ul {
     font-size: 20px;
     float: right;
     padding: .2em;
+    color: var(--main-text);
 }
 .garbageCan:hover {
     color: var(--accent-color);
@@ -90,9 +95,7 @@ ul {
     font-size: .80rem;
     color: var(--main-text);
 }
-.singleQuestion, .answer {
-    margin-left: 5px;
-}
+
 .answer{
     padding-top: 1em;
     margin: 0 auto;
@@ -132,4 +135,13 @@ label {
 legend {
     font-family: 'Montserrat Alternates', sans-serif;
     color: var(--main-text);
+}
+.topicButton, .allButton {
+    padding: .25em 1.5em;
+    border: var(--main-text) 2px solid;
+    border-radius: 1rem;
+    color: white;
+    background-color: #F75C03F9;
+    text-transform: uppercase;
+    font-weight: bold;
 }

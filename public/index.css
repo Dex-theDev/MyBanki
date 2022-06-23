@@ -8,11 +8,16 @@ body {
     background-color: var(--background-color);
 }
 h6 {
-    margin: 0;
+    margin: 0 auto;
     font-family: 'Passion One', cursive;
     font-size: 1rem;
     font-weight: lighter;
     color: var(--text-color);
+    width: 70%;
+}
+
+h1 {
+    font-size: 2rem;
 }
 h1, h4 {
     font-family:  'Passion One', cursive;
@@ -28,6 +33,19 @@ h4{
     margin-top: 3em;
     gap: 1em;
 }
+.startButton, .stopButton, .nextButton, .backButton, .viewAnswerButton {
+    padding: .25em 1.5em;
+    border: var(--text-color) 2px solid;
+    border-radius: 1rem;
+    color: white;
+    background-color: #F75C03F9;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.startButton:hover, .stopButton:hover, .nextButton:hover, .backButton:hover, .viewAnswerButton:hover {
+    background-color: var(--text-color);
+    transition: ease 200ms;
+}
 .cardSpace {
     border: solid 2px var(--text-color);
     width: 25%;
@@ -41,21 +59,20 @@ h4{
     font-family: 'Montserrat Alternates', sans-serif;
     color: var(--text-color);
 }
-.cardSpace::after {
+.topic::after {
     content: '';
-    width: 90%;
+    display: block;
+    margin: 0 auto;
+    width: 70%;
+    padding-top: 1em;
     border-bottom: dashed 2px #F75C03F9;
-    position: absolute;
-    left: 10px;
-    bottom: 63%;
-    z-index: 1;
-    
+
 }
 .topic {
     font-weight: bold;
 }
 .question {
-    padding-top: .5em;
+    padding-top: 1.5em;
     font-style: italic;
 }
 .answer {
@@ -68,9 +85,26 @@ h4{
     margin-top: 1em;
 }
 .viewAnswerButton {
-    margin: 0 auto;
+    margin: 0 auto 1em auto;
 }
 
 .animate__animated.animate__bounceIn{
     --animate-duration: 1s;
+}
+.intro {
+    background: #ffa50038;
+    width: 80%;
+    margin: 0 auto;
+    border-radius: .50em;
+}
+.image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+}
+img {
+    width: 100%;
+    height: 100%; 
+    object-fit: contain;
 }

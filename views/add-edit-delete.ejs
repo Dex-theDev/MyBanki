@@ -15,12 +15,13 @@
 
     <h3>View questions by topic:</h3>
     <div class="buttons">
-        <button type="button">Behavioral</button>
-        <button type="button">HTML</button>
-        <button type="button">CSS</button>
-        <button type="button">Javascript</button>
+        <button class = 'allButton' type="button">ALL</button>
+        <button class="topicButton" type="button" value="Behavioral">Behavioral</button>
+        <button class="topicButton" type="button" value="HTML">HTML</button>
+        <button class="topicButton" type="button" value="CSS">CSS</button>
+        <button class="topicButton" type="button" value="Javascript">Javascript</button>
     </div>
-    <a href="/">Home</a>
+    <a href="/"><i class="fa-solid fa-house"></i></a>
 
     <div class="questionView">
         <ul>
@@ -33,6 +34,9 @@
                 </li>
             <% } %>
         </ul>
+    </div>
+    <div class="viewByTopic">
+
     </div>
 
     <h3>Add A New Question</h3>

@@ -8,8 +8,10 @@ const updateButton = document.querySelector('#updateButton')
 const deleteButton = document.querySelector('#deleteButton')
 //updateButton.addEventListener('click', updateEntry)
 //deleteButton.addEventListener('click', deleteEntry)
-console.log('we here')
-
+const topicButtons = Array.from(document.querySelectorAll('.topicButton'))
+const questionView = document.querySelector('.questionView')
+const viewByTopic = document.querySelector('.viewByTopic')
+const allButton = document.querySelector('.allButton')
 //Create an array of all the current trash buttons on the page
 Array.from(deleteText).forEach(e => {
     e.addEventListener('click', deleteQuestion)
@@ -80,14 +82,34 @@ async function deleteQuestion(){
     }
 }
 
+topicButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const arr = Array.from(document.querySelectorAll('.questionCard'))
+        const topic = event.target.value
+        console.log(topic)
+    //   for(i = 0; i<arr.length; i++){
+    //     if(arr[i].childNodes[1].innerText !== topic){
+    //         console.log(arr[i])
+    //     } 
+    //   }
+    arr.forEach(card => {
+        if(card.childNodes[1].innerText !== topic){
+            console.log(card)
+            card.style.display = "none"
+        }
+        else if(card.childNodes[1].innerText == topic){
+            card.style.display = 'block'
+        }
+    })
+    })
+})
 
-
-
-
-
-
-
-
+allButton.addEventListener('click', () => {
+    const arr = Array.from(document.querySelectorAll('.questionCard'))
+    arr.forEach(card => {
+        card.style.display = 'block'
+    })
+})
 
 
 
