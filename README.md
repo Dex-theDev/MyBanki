@@ -1,9 +1,9 @@
 # MyBanki
 This FullStack application allows the user to create and study flashcards! I made this version specifically for Technical interview questions, or "The Bank". With similar functionalityy to the famous Anki App...BANKI! Study for your technical interviews on the go! With a simple, yet catchy interface, studying will be more of a hobby instead of a chore with this application!
 
-<!--<p align="center">
-  <img width="800" height="400" src="https://github.com/Dex-theDev/NYC-Stargazers/blob/main/nasapage.gif?raw=true">
-</p>-->
+<p align="center">
+  <img width="800" height="400" src="https://github.com/Dex-theDev/MyBanki/blob/main/Capture.PNG?raw=true">
+</p>
 
 ### How It's Made:
 #### Tech Used: EJS / CSS / Vanilla Javascript / Node.js - Express / MongoDB / Postman
