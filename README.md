@@ -7,6 +7,7 @@ This FullStack application allows the user to create and study flashcards! I mad
 <p align="center">
   <img width="800" height="400" src="https://github.com/Dex-theDev/MyBanki/blob/main/Capture2.PNG?raw=true">
  </p>
+ 
 ### How It's Made:
 #### Tech Used: EJS / CSS / Vanilla Javascript / Node.js - Express / MongoDB / Postman
 
