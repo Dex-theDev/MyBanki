@@ -31,10 +31,10 @@ async function getQuestions(){
         nextButton.style.display = 'flex'
         backButton.style.display = 'flex'
         topic.innerHTML = data[counter].topic
-        question.innerHTML = data[counter].question
+        question.innerHTML = data[counter].question.replace('>', ' >').replace('<', '< ')
         viewAnswer.addEventListener('click', () =>{
             viewAnswer.style.display = 'none'
-            answer.innerHTML = data[counter].answer
+            answer.innerHTML = data[counter].answer.replace('>', ' >').replace('<', '< ')
         })
         nextButton.addEventListener('click', () => {
         cardSpace.classList.remove('animate__animated', 'animate__bounceIn')
